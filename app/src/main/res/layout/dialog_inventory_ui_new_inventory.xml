@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_button_with_text_container_stroke">
+
+
+    <TextView
+        android:id="@+id/textViewInventoryNewInventory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/inventoryDashboardMargin"
+        android:paddingStart="@dimen/searchOptionsFragmentTextPaddingStart"
+        android:text="@string/inventoryUINewInventoryFloors"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic_floor_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Spinner
+        android:id="@+id/spinnerInventoryNewInventory"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inventoryUINewInventorySpinnerHeight"
+        android:layout_margin="@dimen/inventoryDashboardMargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInventoryNewInventory" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/inventoryDashboardMargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerInventoryNewInventory"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/buttonNewInventoryStartNew"
+            android:background="@drawable/inventory_ui_scan_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inventoryButtonHeight"
+            android:layout_weight=".5"
+            android:layout_marginEnd="@dimen/inventoryUINewInventoryButtonSideMargin"
+            android:text="@string/inventoryUINewInventoryStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/buttonTextColor"/>
+
+        <Button
+            android:id="@+id/buttonNewInventoryCancel"
+            android:background="@drawable/inventory_ui_scan_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inventoryButtonHeight"
+            android:layout_weight="0.5"
+            android:layout_marginStart="@dimen/inventoryUINewInventoryButtonSideMargin"
+            android:text="@string/inventoryUINewInventoryCancel"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/buttonTextColor"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

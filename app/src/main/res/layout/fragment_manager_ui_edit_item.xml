@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_manager_buttonlayout_db_button_active">
+
+    <TextView
+        android:id="@+id/textViewMoveItemEditItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dialogMarginAndPadding"
+        android:layout_marginEnd="@dimen/dialogMarginAndPadding"
+        android:background="@color/transparent"
+        android:ems="10"
+        android:padding="@dimen/dialogMarginAndPadding"
+        android:text="@string/managerUIEditItemMoveItemText"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutEditItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/manager_move_item"
+        android:layout_marginStart="@dimen/dialogMarginAndPadding"
+        android:layout_marginEnd="@dimen/dialogMarginAndPadding"
+        android:padding="@dimen/dialogMarginAndPadding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMoveItemEditItemFragment">
+
+        <TextView
+            android:id="@+id/textViewRoomsEditItemFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/dialogMarginAndPadding"
+            android:paddingStart="@dimen/searchOptionsFragmentTextPaddingStart"
+            android:paddingEnd="@dimen/searchOptionsFragmentTextPadding"
+            android:text="@string/managerUIEditItemMoveItemRoomText"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            app:drawableStartCompat="@drawable/ic_room_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayoutEditItem"/>
+
+        <Spinner
+            android:id="@+id/spinnerRoomsEditItemFragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/searchOptionsFragmentSpinnerHeight"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dialogMarginAndPadding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRoomsEditItemFragment"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textViewEditEditItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dialogMarginAndPadding"
+        android:layout_marginEnd="@dimen/dialogMarginAndPadding"
+        android:background="@color/transparent"
+        android:ems="10"
+        android:padding="@dimen/dialogDeletePadding"
+        android:text="@string/managerUIEditItemEditItemText"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutEditItem"/>
+
+    <EditText
+        android:id="@+id/editTextStatusEditItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialogEditTextHeight"
+        android:layout_marginStart="@dimen/dialogMarginAndPadding"
+        android:layout_marginEnd="@dimen/dialogMarginAndPadding"
+        android:background="@drawable/app_edit_text"
+        android:ems="10"
+        android:hint="@string/managerUIItemParamsStatus"
+        android:inputType="textPersonName"
+        android:paddingStart="@dimen/dialogStartPaddingNoIcon"
+        android:paddingEnd="@dimen/dialogTextPadding"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEditEditItemFragment" />
+
+    <EditText
+        android:id="@+id/editTextCodeEditItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialogEditTextHeight"
+        android:layout_marginStart="@dimen/dialogMarginAndPadding"
+        android:layout_marginEnd="@dimen/dialogMarginAndPadding"
+        android:layout_marginTop="@dimen/dialogMarginAndPadding"
+        android:background="@drawable/app_edit_text"
+        android:ems="10"
+        android:hint="@string/managerUIItemParamsCode"
+        android:inputType="textPersonName"
+        android:paddingStart="@dimen/dialogStartPaddingNoIcon"
+        android:paddingEnd="@dimen/dialogTextPadding"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextStatusEditItemFragment" />
+
+    <EditText
+        android:id="@+id/editTextCategoryEditItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialogEditTextHeight"
+        android:layout_marginStart="@dimen/dialogMarginAndPadding"
+        android:layout_marginEnd="@dimen/dialogMarginAndPadding"
+        android:layout_marginTop="@dimen/dialogMarginAndPadding"
+        android:background="@drawable/app_edit_text"
+        android:ems="10"
+        android:hint="@string/managerUIItemParamsCategory"
+        android:inputType="textPersonName"
+        android:paddingStart="@dimen/dialogStartPaddingNoIcon"
+        android:paddingEnd="@dimen/dialogTextPadding"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCodeEditItemFragment" />
+
+    <EditText
+        android:id="@+id/editTextNameEditItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialogEditTextHeight"
+        android:layout_marginStart="@dimen/dialogMarginAndPadding"
+        android:layout_marginEnd="@dimen/dialogMarginAndPadding"
+        android:layout_marginTop="@dimen/dialogMarginAndPadding"
+        android:background="@drawable/app_edit_text"
+        android:ems="10"
+        android:hint="@string/managerUIItemParamsName"
+        android:inputType="textPersonName"
+        android:paddingStart="@dimen/dialogStartPaddingNoIcon"
+        android:paddingEnd="@dimen/dialogTextPadding"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCategoryEditItemFragment" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutEditItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameEditItemFragment">
+
+        <Button
+            android:id="@+id/buttonScanEditItemFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/managerUIAddItemScanButton"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/dialogMarginAndPadding"
+            android:layout_marginStart="@dimen/dialogMarginAndPadding"
+            android:layout_marginEnd="@dimen/dialogMarginAndPadding"
+            android:background="@drawable/dialog_button"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonDeleteEditItemFragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/managerUIEditItemDeleteItemButton"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/dialogMarginAndPadding"
+            android:layout_marginStart="@dimen/dialogMarginAndPadding"
+            android:layout_marginEnd="@dimen/dialogMarginAndPadding"
+            android:background="@drawable/dialog_button"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonManagerUIEditItemFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutEditItem"
+        app:srcCompat="@drawable/ic_save"
+        android:backgroundTint="@color/appBackgroundColor"
+        android:layout_marginBottom="12dp"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerEditItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBackEditItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/managerUIEditItemBackButton"
+        android:background="@color/transparent"
+        android:textAllCaps="false"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/editItemFragmentBackButtonMarginTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonManagerUIEditItemFragment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

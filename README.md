@@ -1,0 +1,1 @@
+This is an Android app developed for a university assignment. It is a REST API http client which facilitates database management. This includes deleting, editing, viewing, adding and sorting pre-defined objects whose data is stored in a database.

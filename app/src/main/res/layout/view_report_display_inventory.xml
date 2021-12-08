@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/reportDisplayHeight"
+    android:background="@drawable/app_button_with_text_container_stroke"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonInventoryResumeReports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginEnd="@dimen/reportDisplayFABMarginEnd"
+        app:backgroundTint="@color/appBackgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_resume"/>
+
+    <TextView
+        android:id="@+id/textViewInventoryResumeReports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inwentaryzacja: P1, Budynek A\n1900/01/01 00:00:00"
+        android:textSize="17sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="@dimen/reportDisplayTextViewMarginStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

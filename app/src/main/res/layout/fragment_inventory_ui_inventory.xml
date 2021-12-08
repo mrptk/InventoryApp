@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundColor">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerDashManActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewInventoryUIInventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inwentaryzacja: "
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/inventoryUIInventoryTextViewTopMargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/buttonsInventory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/inventory_inventory_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/buttonFinishInventoryInventoryFragment"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inventoryUIInventoryButtonHeight"
+            android:layout_weight="0.5"
+            android:text="@string/inventoryUIInventoryFinishInventory"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@color/transparent"/>
+
+        <Button
+            android:id="@+id/buttonPauseInventoryInventoryFragment"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inventoryUIInventoryButtonHeight"
+            android:layout_weight="0.5"
+            android:text="@string/inventoryUIInventoryPauseInventory"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@color/transparent"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonScanInventoryInventoryFragment"
+        android:layout_width="@dimen/inventoryUIInventoryButtonWidth"
+        android:layout_height="@dimen/inventoryUIInventoryButtonHeight"
+        android:layout_marginBottom="@dimen/inventoryUIInventoryScanButtonBottomMargin"
+        android:text="@string/inventoryUIInventoryScan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonsInventory"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@color/buttonTextColor"
+        android:background="@drawable/inventory_ui_scan_button" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/inventoryUIInventoryScrollViewMargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInventoryUIInventory"
+        app:layout_constraintBottom_toTopOf="@+id/buttonScanInventoryInventoryFragment">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollViewInventoryUIInventory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

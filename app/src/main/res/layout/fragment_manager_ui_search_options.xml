@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonBackSearchOptionsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dashboardManButtonHeight"
+        android:background="@drawable/manager_db_add_and_close_button"
+        android:text="@string/managerUISearchOptionsBackButton"
+        android:textAllCaps="false"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="20sp"
+        android:paddingStart="@dimen/viewDBButtonPadding"
+        android:paddingEnd="@dimen/viewDBButtonPadding"
+        android:drawablePadding="@dimen/viewDBButtonDrawablePadding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSearchOptions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBackSearchOptionsFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutBuildingsSearchOptionsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".33"
+            android:layout_marginStart="@dimen/searchOptionsFragmentSmallMargin"
+            android:layout_marginEnd="@dimen/searchOptionsFragmentSmallMargin"
+            android:layout_marginTop="@dimen/searchOptionsFragmentSmallMargin"
+            android:layout_marginBottom="@dimen/searchOptionsFragmentSmallMargin"
+            android:background="@drawable/app_button_with_text_container_stroke">
+
+            <Spinner
+                android:id="@+id/spinnerBuildingsSearchOptionsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/searchOptionsFragmentSpinnerHeight"
+                android:layout_below="@+id/textViewBuildingsSearchOptionsFragment"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/searchOptionsFragmentSpinnerMarginTopBottom"
+                android:layout_marginBottom="@dimen/searchOptionsFragmentSpinnerMarginTopBottom"
+                android:layout_marginStart="@dimen/searchOptionsFragmentSpinnerMarginStart"
+                android:layout_marginEnd="@dimen/searchOptionsFragmentSpinnerMarginEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textViewBuildingsSearchOptionsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/searchOptionsFragmentBoxMarginTop"
+                android:paddingStart="@dimen/searchOptionsFragmentTextPaddingStart"
+                android:paddingEnd="@dimen/searchOptionsFragmentTextPadding"
+                android:text="@string/managerUISearchOptionsBuildingsTextView"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_building_left"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addBuildingFloatingButtonSearchOptionsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerBuildingsSearchOptionsFragment"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/searchOptionsFragmentFloatingButtonMargin"
+                android:layout_marginTop="0dp"
+                android:clickable="true"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:fabCustomSize="40dp"
+                app:srcCompat="@android:drawable/ic_input_add" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/deleteBuildingFloatingButtonSearchOptionsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerBuildingsSearchOptionsFragment"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="@dimen/searchOptionsFragmentFloatingButtonMargin"
+                android:clickable="true"
+                app:backgroundTint="@color/buttonColor_2"
+                app:fabCustomSize="40dp"
+                app:srcCompat="@android:drawable/ic_delete" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/editBuildingFloatingButtonSearchOptionsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerBuildingsSearchOptionsFragment"
+                android:layout_marginStart="@dimen/searchOptionsFragmentFABMarginStart"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/addBuildingFloatingButtonSearchOptionsFragment"
+                android:clickable="true"
+                app:backgroundTint="@color/buttonColor_1"
+                app:fabCustomSize="40dp"
+                app:srcCompat="@drawable/ic_edit" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutFloorsSearchOptionsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".33"
+            android:layout_marginStart="@dimen/searchOptionsFragmentSmallMargin"
+            android:layout_marginEnd="@dimen/searchOptionsFragmentSmallMargin"
+            android:layout_marginTop="@dimen/searchOptionsFragmentSmallMargin"
+            android:layout_marginBottom="@dimen/searchOptionsFragmentSmallMargin"
+            android:background="@drawable/app_button_with_text_container_stroke">
+
+            <Spinner
+                android:id="@+id/spinnerFloorsSearchOptionsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/searchOptionsFragmentSpinnerHeight"
+                android:layout_below="@+id/textViewFloorsSearchOptionsFragment"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/searchOptionsFragmentSpinnerMarginTopBottom"
+                android:layout_marginBottom="@dimen/searchOptionsFragmentSpinnerMarginTopBottom"
+                android:layout_marginStart="@dimen/searchOptionsFragmentSpinnerMarginStart"
+                android:layout_marginEnd="@dimen/searchOptionsFragmentSpinnerMarginEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewFloorsSearchOptionsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/searchOptionsFragmentBoxMarginTop"
+                android:paddingStart="@dimen/searchOptionsFragmentTextPaddingStart"
+                android:paddingEnd="@dimen/searchOptionsFragmentTextPadding"
+                android:text="@string/managerUISearchOptionsFloorsTextView"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_floor_left"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addFloorFloatingButtonSearchOptionsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerFloorsSearchOptionsFragment"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/searchOptionsFragmentFloatingButtonMargin"
+                android:layout_marginTop="0dp"
+                android:clickable="true"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:fabCustomSize="40dp"
+                app:srcCompat="@android:drawable/ic_input_add" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/deleteFloorFloatingButtonSearchOptionsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerFloorsSearchOptionsFragment"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="@dimen/searchOptionsFragmentFloatingButtonMargin"
+                android:clickable="true"
+                app:backgroundTint="@color/buttonColor_2"
+                app:fabCustomSize="40dp"
+                app:srcCompat="@android:drawable/ic_delete" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/editFloorFloatingButtonSearchOptionsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerFloorsSearchOptionsFragment"
+                android:layout_marginStart="@dimen/searchOptionsFragmentFABMarginStart"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/addFloorFloatingButtonSearchOptionsFragment"
+                android:clickable="true"
+                app:backgroundTint="@color/buttonColor_1"
+                app:fabCustomSize="40dp"
+                app:srcCompat="@drawable/ic_edit" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativeLayoutRoomsSearchOptionsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".33"
+            android:layout_marginStart="@dimen/searchOptionsFragmentSmallMargin"
+            android:layout_marginEnd="@dimen/searchOptionsFragmentSmallMargin"
+            android:layout_marginTop="@dimen/searchOptionsFragmentSmallMargin"
+            android:layout_marginBottom="@dimen/searchOptionsFragmentSmallMargin"
+            android:background="@drawable/app_button_with_text_container_stroke">
+
+            <Spinner
+                android:id="@+id/spinnerRoomsSearchOptionsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/searchOptionsFragmentSpinnerHeight"
+                android:layout_below="@+id/textViewRoomsSearchOptionsFragment"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/searchOptionsFragmentSpinnerMarginTopBottom"
+                android:layout_marginBottom="@dimen/searchOptionsFragmentSpinnerMarginTopBottom"
+                android:layout_marginStart="@dimen/searchOptionsFragmentSpinnerMarginStart"
+                android:layout_marginEnd="@dimen/searchOptionsFragmentSpinnerMarginEnd"/>
+
+            <TextView
+                android:id="@+id/textViewRoomsSearchOptionsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/searchOptionsFragmentBoxMarginTop"
+                android:paddingStart="@dimen/searchOptionsFragmentTextPaddingStart"
+                android:paddingEnd="@dimen/searchOptionsFragmentTextPadding"
+                android:text="@string/managerUISearchOptionsRoomsTextView"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_room_left" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addRoomFloatingButtonSearchOptionsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerRoomsSearchOptionsFragment"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/searchOptionsFragmentFloatingButtonMargin"
+                android:layout_marginTop="0dp"
+                android:clickable="true"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:fabCustomSize="40dp"
+                app:srcCompat="@android:drawable/ic_input_add" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/deleteRoomFloatingButtonSearchOptionsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerRoomsSearchOptionsFragment"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="@dimen/searchOptionsFragmentFloatingButtonMargin"
+                android:clickable="true"
+                app:backgroundTint="@color/buttonColor_2"
+                app:fabCustomSize="40dp"
+                app:srcCompat="@android:drawable/ic_delete" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/editRoomFloatingButtonSearchOptionsFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinnerRoomsSearchOptionsFragment"
+                android:layout_marginStart="@dimen/searchOptionsFragmentFABMarginStart"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/addRoomFloatingButtonSearchOptionsFragment"
+                android:clickable="true"
+                app:backgroundTint="@color/buttonColor_1"
+                app:fabCustomSize="40dp"
+                app:srcCompat="@drawable/ic_edit" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerSearchOptionsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

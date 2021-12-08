@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/appBackgroundColor">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerInventoryDashboardActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/inventoryDashboardMargin"
+        android:layout_marginEnd="@dimen/inventoryDashboardMargin"
+        android:layout_marginTop="@dimen/inventoryDashboardMargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsInventoryDashboardActivity" />
+
+    <LinearLayout
+        android:id="@+id/buttonsInventoryDashboardActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/inventory_dashboard_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/buttonNewInventory"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inventoryButtonHeight"
+            android:layout_weight="0.5"
+            android:background="@color/transparent"
+            android:text="@string/inventoryUIDashboardNewButton"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonResumeInventory"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inventoryButtonHeight"
+            android:layout_weight="0.5"
+            android:background="@color/transparent"
+            android:text="@string/inventoryUIDashboardResumeButton"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/appBackgroundColor"
+    tools:context=".LogInActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutLoginActivity"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/loginActivityRelativeLayoutHeight"
+        android:background="@drawable/app_button_with_text_container_stroke"
+        android:layout_marginStart="@dimen/loginActivityRelativeLayoutMargin"
+        android:layout_marginEnd="@dimen/loginActivityRelativeLayoutMargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editTextUsernameLoginActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/loginActivityEditTextHeight"
+            android:layout_below="@+id/textViewMessageLoginActivity"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/loginActivityStartEndMargin"
+            android:layout_marginTop="@dimen/loginActivityPasswordTextViewAndUsernameEditTextMargin"
+            android:layout_marginEnd="@dimen/loginActivityStartEndMargin"
+            android:paddingStart="@dimen/loginActivityEditTextPadding"
+            android:paddingEnd="@dimen/loginActivityEditTextPadding"
+            android:ems="10"
+            android:background="@drawable/app_edit_text"
+            android:drawableStart="@drawable/ic_username"
+            android:drawablePadding="@dimen/loginActivityEditTextPadding"
+            android:hint="@string/logInActivityLoginHintLabel"
+            android:textColorHint="@color/colorPrimary"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextPasswordLoginActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/loginActivityEditTextHeight"
+            android:layout_below="@+id/editTextUsernameLoginActivity"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/loginActivityStartEndMargin"
+            android:layout_marginTop="@dimen/loginActivityPasswordEditTextTopMargin"
+            android:layout_marginEnd="@dimen/loginActivityStartEndMargin"
+            android:paddingStart="@dimen/loginActivityEditTextPadding"
+            android:paddingEnd="@dimen/loginActivityEditTextPadding"
+            android:ems="10"
+            android:background="@drawable/app_edit_text"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="@dimen/loginActivityEditTextPadding"
+            android:hint="@string/logInActivityPasswordHintLabel"
+            android:textColorHint="@color/colorPrimary"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/buttonLogInLoginActivity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/loginActivityButtonHeight"
+            android:layout_below="@+id/editTextPasswordLoginActivity"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/loginActivityStartEndMargin"
+            android:layout_marginTop="@dimen/loginActivityStartEndMargin"
+            android:layout_marginEnd="@dimen/loginActivityStartEndMargin"
+            android:onClick="logInClick"
+            android:text="@string/logInActivityButton"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/buttonTextColor"
+            android:background="@drawable/app_login_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewMessageLoginActivity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/loginActivityMessageHeight"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/loginActivityPasswordTextViewAndUsernameEditTextMargin"
+            android:gravity="center"
+            android:text="@string/logInActivityDefaultMessageLabel"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBarLoginActivity"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="6dp"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

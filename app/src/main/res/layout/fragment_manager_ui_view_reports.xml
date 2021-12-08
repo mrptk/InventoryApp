@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/manager_reports">
+
+    <ScrollView
+        android:id="@+id/scrollviewManagerUIViewReportsDatabaseFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/viewReportsScrollViewMargin"
+        android:background="@drawable/manager_report_scrollview"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGetReportsManagerUIViewReportsFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollViewManagerUIViewReportsFragment"
+            android:padding="@dimen/viewReportsScrollViewMargin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonGetReportsManagerUIViewReportsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewReportsButtonHeight"
+        android:text="@string/managerUIViewReportsGetReportsButton"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/manager_report_button"
+        android:layout_marginBottom="@dimen/viewReportsButtonMargin"
+        android:layout_marginStart="@dimen/viewReportsButtonMargin"
+        android:layout_marginEnd="@dimen/viewReportsButtonMargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollviewManagerUIViewReportsDatabaseFragment"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
